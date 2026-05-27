@@ -1,0 +1,76 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #dbeafe, #f0f9ff);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Menu */
+nav {
+    background-color: #2563eb;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #facc15;
+}
+
+/* Conteúdo principal */
+.container {
+    width: 80%;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1 {
+    color: #2563eb;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Botão */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111827;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+

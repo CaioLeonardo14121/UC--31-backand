@@ -1,0 +1,30 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <a href="/">Início</a>
+        <a href="/cursos">Cursos</a>
+        <a href="/professores">Professores</a>
+        <a href="/contato">Contato</a>
+    </nav>
+
+    <hr>
+
+    {% block conteudo %}
+    {% endblock %}
+
+    <hr>
+
+    <footer>
+        <p>TechFuture</p>
+    </footer>
+
+</body>
+</html>
