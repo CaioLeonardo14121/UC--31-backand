@@ -1,0 +1,200 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.5s;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    padding:20px;
+}
+
+/* Container Principal */
+.container{
+    width:420px;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 8px 32px rgba(0,0,0,0.25);
+
+    animation:entrada 0.8s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    margin-bottom:10px;
+    font-size:2rem;
+    color:white;
+}
+
+h2{
+    margin-bottom:25px;
+    color:#f1f1f1;
+}
+
+/* Formulário */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Inputs */
+input{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+
+    background:rgba(255,255,255,0.2);
+    color:white;
+
+    transition:0.3s;
+}
+
+input::placeholder{
+    color:#ddd;
+}
+
+input:focus{
+    transform:scale(1.03);
+    background:rgba(255,255,255,0.3);
+    box-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+/* Botão */
+button{
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:bold;
+
+    background:linear-gradient(45deg,#ff512f,#dd2476);
+    color:white;
+
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Área de Temas */
+.temas{
+    margin-top:25px;
+}
+
+.temas p{
+    color:white;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+.temas a{
+    text-decoration:none;
+    padding:12px 18px;
+    border-radius:12px;
+    margin:5px;
+    display:inline-block;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+/* Botão Claro */
+.temas a:first-child{
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+}
+
+/* Botão Escuro */
+.temas a:last-child{
+    background:linear-gradient(45deg,#232526,#414345);
+}
+
+.temas a:hover{
+    transform:translateY(-3px) scale(1.05);
+}
+
+/* ========================= */
+/* TEMA CLARO */
+/* ========================= */
+
+.claro{
+    background:linear-gradient(135deg,#74ebd5,#9face6);
+    color:#222;
+}
+
+.claro .container{
+    background:rgba(255,255,255,0.35);
+}
+
+.claro h1,
+.claro h2{
+    color:#222;
+}
+
+.claro input{
+    color:#222;
+}
+
+.claro input::placeholder{
+    color:#666;
+}
+
+/* ========================= */
+/* TEMA ESCURO */
+/* ========================= */
+
+.escuro{
+    background:linear-gradient(135deg,#141e30,#243b55);
+    color:white;
+}
+
+.escuro .container{
+    background:rgba(0,0,0,0.25);
+}
+
+/* Efeito de brilho */
+.container::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:rgba(255,255,255,0.15);
+    border-radius:50%;
+    top:-50px;
+    right:-50px;
+}
+
+.container{
+    position:relative;
+    overflow:hidden;
+}
