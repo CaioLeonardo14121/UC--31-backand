@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Área Restrita</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="dashboard-body">
+
+    <div class="sidebar">
+        <h2>Flask System</h2>
+
+        <a href="#">Dashboard</a>
+        <a href="#">Usuários</a>
+        <a href="#">Sessões</a>
+        <a href="#">Relatórios</a>
+
+        <a href="/logout" class="logout">Sair</a>
+    </div>
+
+    <div class="main">
+
+        <div class="header">
+            <h1>Área Restrita</h1>
+            <span>Bem-vindo, {{ usuario }}</span>
+        </div>
+
+        <div class="hero">
+            <h2>Sistema Autenticado</h2>
+            <p>Acesso autorizado através de Flask Sessions.</p>
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+                <span>Usuário</span>
+                <h3>{{ usuario }}</h3>
+            </div>
+
+            <div class="card">
+                <span>Status</span>
+                <h3>Online</h3>
+            </div>
+
+            <div class="card">
+                <span>Sessão</span>
+                <h3>Ativa</h3>
+            </div>
+
+            <div class="card">
+                <span>Segurança</span>
+                <h3>100%</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
