@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Acessos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Contador de Acessos</h1>
+
+        <div class="contador-card">
+
+            <p class="texto">
+                Número de acessos nesta sessão
+            </p>
+
+            <div class="contador">
+                {{ acessos }}
+            </div>
+
+            <p class="descricao">
+                Atualize a página para incrementar o contador.
+            </p>
+
+            <a href="{{ url_for('zerar') }}">
+                <button>Zerar</button>
+            </a>
+
+        </div>
+
+        <footer>
+            <small>Controle de visitas utilizando armazenamento em sessão.</small>
+        </footer>
+
+    </div>
+
+</body>
+</html>
