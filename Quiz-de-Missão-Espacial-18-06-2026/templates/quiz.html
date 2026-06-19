@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>🚀 Pergunta {{ numero }}/{{ total }}</h1>
+
+        <div class="barra">
+            <div class="progresso" style="width: {{ (numero / total) * 100 }}%;"></div>
+        </div>
+
+        <h2>{{ pergunta.pergunta }}</h2>
+
+        <form action="{{ url_for('responder') }}" method="POST">
+
+            {% for opcao in pergunta.opcoes %}
+                <label class="opcao">
+                    <input
+                        type="radio"
+                        name="resposta"
+                        value="{{ opcao }}"
+                        required
+                    >
+                    {{ opcao }}
+                </label>
+            {% endfor %}
+
+            <button type="submit">
+                Responder
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

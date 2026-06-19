@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Missão Espacial</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container login">
+
+    <h1>🚀 MISSÃO ESPACIAL</h1>
+
+    <h2>Bem-vindo, Astronauta!</h2>
+
+    <form action="/entrar" method="POST">
+
+        <input
+            type="text"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+        >
+
+        <button type="submit">
+            Iniciar Missão
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

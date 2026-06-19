@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado da Missão</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏆 Missão Concluída</h1>
+
+    <h2>Parabéns, {{ nome }}!</h2>
+
+    <p>
+        Você acertou
+        <strong>{{ pontos }}/{{ total }}</strong>
+        perguntas.
+    </p>
+
+    <h3>{{ classificacao }}</h3>
+
+    <hr>
+
+    <h2>📚 Gabarito da Missão</h2>
+
+    {% for item in respostas_corretas %}
+
+    <div class="gabarito">
+        <p><strong>Pergunta:</strong> {{ item.pergunta }}</p>
+        <p><strong>Resposta Correta:</strong> {{ item.resposta }}</p>
+    </div>
+
+    <hr>
+
+    {% endfor %}
+
+    <a href="/">
+        <button>🚀 Nova Missão</button>
+    </a>
+
+</div>
+
+</body>
+</html>
